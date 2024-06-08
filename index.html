@@ -1,18 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System Animation</title>
+  <style>
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+  }
+  
+  .sun {
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, #fff, #fffa00);
+    box-shadow: 0 0 30px 10px rgba(255, 250, 0, 0.6),
+                0 0 50px 20px rgba(255, 250, 0, 0.4),
+                0 0 70px 30px rgba(255, 250, 0, 0.2);
+  
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  .planet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0 50%;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .mercury {
+    background-color: #dcdcdc;
+    animation-name: orbit-mercury;
+    animation-duration: 4s;
+  }
+  
+  .venus {
+    background-color: #ffd700;
+    animation-name: orbit-venus;
+    animation-duration: 6s;
+  }
+  
+  .earth {
+    background-color: #6ba5d7;
+    animation-name: orbit-earth;
+  }
+  
+  .mars {
+    background-color: #ff6347;
+    animation-name: orbit-mars;
+    animation-duration: 12s;
+  }
+  
+  .jupiter {
+    background-color: #b5651d;
+    animation-name: orbit-jupiter;
+    animation-duration: 24s;
+  }
+  
+  .saturn {
+    background-color: #d8b36a;
+    animation-name: orbit-saturn;
+    animation-duration: 36s;
+  }
+  
+  .uranus {
+    background-color: #afeeee;
+    animation-name: orbit-uranus;
+    animation-duration: 48s;
+  }
+  
+  .neptune {
+    background-color: #4169e1;
+    animation-name: orbit-neptune;
+    animation-duration: 60s;
+  }
+  
+  @keyframes orbit-mercury {
+    from { transform: rotate(0deg) translateX(70px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-venus {
+    from { transform: rotate(0deg) translateX(100px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(100px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-earth {
+    from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-mars {
+    from { transform: rotate(0deg) translateX(200px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(200px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-jupiter {
+    from { transform: rotate(0deg) translateX(270px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(270px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-saturn {
+    from { transform: rotate(0deg) translateX(350px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(350px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-uranus {
+    from { transform: rotate(0deg) translateX(430px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(430px) rotate(-360deg); }
+  }
+  
+  @keyframes orbit-neptune {
+    from { transform: rotate(0deg) translateX(500px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(500px) rotate(-360deg); }
+  }
+  
+
+
+  </style>
 </head>
-
-    
- <body>
-
-
-
-    <script src="index.js"></script>
- </body>
-
+<body>
+  <div class="sun"></div>
+  <div class="planet mercury"></div>
+  <div class="planet venus"></div>
+  <div class="planet earth"></div>
+  <div class="planet mars"></div>
+  <div class="planet jupiter"></div>
+  <div class="planet saturn"></div>
+  <div class="planet uranus"></div>
+  <div class="planet neptune"></div>
+</body>
 </html>
